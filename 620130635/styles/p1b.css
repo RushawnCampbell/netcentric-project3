@@ -1,0 +1,66 @@
+.flex-containerp2 {
+    border: 10px solid #687291;
+    border-radius: 15px;
+    padding: 20px;   
+    width: 50%;
+    margin: 0 auto; 
+}
+.one1,.two1{
+    display: none;
+}
+.headingp2{
+    display: none;
+}
+table {
+    font-size: 13px;
+    font-family: 'Gill Sans', sans-serif;
+    border-collapse: collapse;
+    width: 100%;    
+    /*border-bottom: 2px #000000;*/
+    
+}
+
+
+/*table, th, td {
+   
+}*/
+th  hr{
+    height: 2px;
+    background: black;
+}
+tr#lastrow th{
+    font-weight: bold;
+}
+tr:first-child th {
+    font-weight:bold;
+}
+th { font-weight:normal; } 
+
+/*tbody tr td:nth-child(2){
+    color: red;
+}*/
+
+th:nth-child(1) {text-align:left;}
+th:nth-child(2) {text-align:left;}
+th:nth-child(3) {text-align:left;}
+th:nth-child(4) {text-align:left;}
+th:nth-child(5) {text-align:right;}
+th:nth-child(6) {text-align:right;}
+th:nth-child(7) {text-align:right;}
+th:nth-child(8) {text-align:right;}
+
+tr.VA{
+    display:none;
+}
+
+/*tbody tr { display: table; float: left; padding: 2em; }
+tbody td{ display: table;}
+/*tr :not(tfoot tr td){
+    display: table; 
+}
+
+
+td :not(tfoot tr){
+    display: table; float: left; 
+}
+tbody > td{padding: 8px;}*/

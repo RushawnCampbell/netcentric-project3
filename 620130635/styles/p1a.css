@@ -1,0 +1,59 @@
+.flex-containerp2{
+    background-color: #d0d0ff;
+}
+/*table tr > *{
+    display: block;
+    flex-wrap: wrap;
+    text-align: left;
+    background-color: #eeeff2;
+}
+*/
+
+
+/*.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  border-bottom: 2px #d0d0ff;
+}
+
+
+.column1 {
+  width: 500px;
+  float: left;
+}
+
+.column2 {
+    margin-left: 50px;
+}*/
+
+.headingp1 {
+    display: none;
+}
+
+.p2 {
+    display: none;
+}
+td {       
+    width: 500px;   
+    text-align: left;     
+    border-bottom: 2px #d0d0ff;  
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.total {
+    border-bottom: #d0d0ff;
+}
+tr {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    
+}
+
+tr#lastrow{
+    display:none;
+}
+
+tbody {
+    right: 0
+}
