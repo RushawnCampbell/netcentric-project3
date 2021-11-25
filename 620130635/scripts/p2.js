@@ -1,3 +1,16 @@
+const SUBMIT_BUTTON = $("#SubmitButton");
+console.log(SUBMIT_BUTTON);
+console.log(document.querySelector("#SubmitButton"))
+
+SUBMIT_BUTTON.on("click",e=>{
+    console.log('working');
+    setTimeout(2000);
+    e.preventDefault();
+   console.log(validate());
+    
+
+});
+
 function validate() {
     let data = {
         clerkID: (document.form.clerkID.value),
@@ -25,8 +38,7 @@ function validate() {
         return false;
     }
     
-    return true;
-        
+    return true;    
 }
 
 
