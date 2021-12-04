@@ -1,3 +1,14 @@
+<!-- DEBUGGING MODE -->
+<?php
+ini_set('display_errors', 'On');
+error_reporting(E_ALL | E_STRICT);
+?>
+<!-- END OF DEBUGGING MODE -->
+
+
+
+
+
 <?php
 
 require_once 'dbconfig.php';
@@ -58,14 +69,14 @@ try {
     
     if($a&&$b&&$c&&$d&&$e&&$f&&$g&&$h){ //ensuring that all validation was successful
         //add to database
-        $insert = "INSERT INTO stationvotes
+        $insert = "INSERT INTO StationVotes
         (clerk_id,constituency_id,poll_division_id,polling_station_code,candidate1Votes,candidate2Votes,rejectedVotes,totalVotes,record_digest)
         VALUES('$clerkID','$constID','$pdID','$pollStation','$c1votes','$c2votes','$rejected','$total', NULL)";
         
         $sub = $conn->query($insert);
 
         //reading from database
-        $sub = $conn->query("SELECT * FROM STATIONVOTES");
+        $sub = $conn->query("SELECT * FROM StationVotes");
         $records = $sub->fetchALL(PDO ::FETCH_ASSOC);
 
         //concatenating and printing database data as specified
