@@ -4,7 +4,6 @@ require_once 'dbconfig.php';
 
 try {
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    echo "Connected to $dbname at $host successfully.";
 
     if(isset($_POST['submit'])){
         $clrk_ID =filter_var($_POST['clerkID'], FILTER_SANITIZE_NUMBER_INT);
@@ -33,7 +32,6 @@ try {
             $data = "SELECT * FROM StationVotes";
             $Qry = $conn->query($data);
             $data_list = $Qry->fetchALL(PDO ::FETCH_ASSOC);
-            var_dump($data_list[0]);
          }
     }
 
