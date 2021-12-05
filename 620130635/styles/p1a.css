@@ -1,9 +1,15 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
 .part-A{
     background-color: #d0d0ff;
 }
 
 table{
     border-collapse: collapse;
+    width: 80%;
 }
 
 td{
@@ -19,7 +25,9 @@ td{
     display: none;
 }
  
-
+table tr:nth-child(even){
+    background: #eeeff2;
+}
 
 
 
@@ -31,9 +39,8 @@ td{
 }
 
 tr{
-    border-bottom: 2px #d0d0ff;
-    border-bottom: 4px blue;  
-
+    border-bottom: solid #d0d0ff 2px;
+    background:  #dfe1e7;
 }
 /*
 .total {
