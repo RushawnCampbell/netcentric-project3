@@ -4,40 +4,40 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Vote logging form</title> 
 		<link rel="stylesheet" type="text/css" href="styles/p1b.css"/>
-		<script src="scripts/part2.js" type="text/javascript"></script>
+		<script src="scripts/form.js" type="text/javascript"></script>
 	</head>
 
 <body>
 		<div id="VoteLogForm">
 			<h1>Vote logging form</h1>			
-			<form method = "POST" name = "form" id = "form" action = "scripts/php2.php" onsubmit = "return validate()">
+			<form method = "POST" name = "form" id = "form" action = "scripts/php2.php"  >
 				<div>
 					<label for="clerkID">Clerk ID:</label>
-					<input name="clerkID" id="clerkID" /><br /><br />
+					<input type="text" name="clerkID" id="clerkID" /><br /><br />
 					
 					<label for="constID">Constituency ID:</label>
-					<input name="constID" id="constID" /><br /><br />
+					<input type="text" name="constID" id="constID" /><br /><br />
 					
 					<label for="pdID">Polling Division ID:</label>
-					<input name="pdID" id="pdID" /><br /><br />
+					<input type="text" name="pdID" id="pdID" /><br /><br />
 					
 					<label for="pollStation">Polling Station:</label>
-					<input name="pollStation" id="pollStation" /><br /><br />
+					<input type="text" name="pollstat" id="pollStation" /><br /><br />
 					
 					<label for="c1votes">Votes for Candidate 1:</label>
-                    <input name="c1votes" id="c1votes" /><br /><br />
+                    <input type="text" name="c1votes" id="c1votes" /><br /><br />
                     
                     <label for="c2votes">Votes for Candidate 2:</label>
-                    <input name="c2votes" id="c2votes" /><br /><br />
+                    <input type="text" name="c2votes" id="c2votes" /><br /><br />
                     
                     <label for="rejected">Rejected ballots:</label>
-                    <input name="rejected" id="rejected" /><br /><br />
+                    <input type="text" name="reject" id="rejected" /><br /><br />
                     
                     <label for="total">Total number of votes:</label>
-					<input name="total" id="total" /><br /><br />
+					<input type="text" name="totalv" id="total" /><br /><br />
 					
 					<input type="hidden" name="hiddenField" id="hiddenField" value="e11869d1186d0791" /><br /><br />
-					<button type="submit" name="submit" id="submit" value="submit">Submit</button>
+					<button type="submit" name="submit" id="submitbtn" value="submit">Submit</button>
 				</div>
 			</form>
 		</div>
