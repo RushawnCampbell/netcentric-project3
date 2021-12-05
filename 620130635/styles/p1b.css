@@ -1,3 +1,7 @@
+.part-A{
+    display: none;
+}
+
 .flex-containerp2 {
     border: 10px solid #687291;
     border-radius: 15px;
@@ -19,6 +23,8 @@ table {
     /*border-bottom: 2px #000000;*/
     
 }
+
+
 
 
 /*table, th, td {

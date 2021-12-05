@@ -1,3 +1,12 @@
+<!-- DEBUGGING MODE -->
+<?php
+ini_set('display_errors', 'On');
+error_reporting(E_ALL | E_STRICT);
+?>
+<!-- END OF DEBUGGING MODE -->
+
+
+
 <?php
 
 require_once 'dbconfig.php';
@@ -49,47 +58,61 @@ $total_total = 0;
 
 ?>
 
-<table>
-    <tr>
-        <th>Constituency</th>
-        <th>Polling Div.</th>
-        <th>Polling Stn</th>
-        <th>Candidate1</th>
-        <th>Candidate2</th>
-        <th>Rejected</th>
-        <th>Total</th>
-    </tr>    
-
-    <?php foreach($data_list as $row):?>
-        <tr>
-            <td><?=$row['constituency_id'];?></td>
-            <td><?=$row['poll_division_id'];?></td>
-            <td><?=$row['polling_station_code'];?></td>
-            <td><?=$row['candidate1Votes'];?></td>
-            <td><?=$row['candidate2Votes'];?></td>
-            <td><?=$row['rejectedVotes'];?></td>
-            <td><?=$row['totalVotes'];?></td>
-        </tr>
-
-        <?php
-        $candid1_tot += $row['candidate1Votes'];
-        $candid2_tot += $row['candidate2Votes'];
-        $reject_total += $row['rejectedVotes'];
-        $total_total += $row['totalVotes'];
-        ?>
-
-
-    <?php endforeach;?>
-    <hr>
-    <tfoot>
-        <td> <strong>Total</strong></td>
-        <td></td>
-        <td></td>
-        <td><strong><?=$candid1_tot;?></strong></td>
-        <td><strong><?=$candid2_tot;?></strong></td>
-        <td><strong><?=$reject_total;?></strong></td>
-        <td><strong><?=$total_total;?></strong></td>
-    </tfoot>
-
-
-</table>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles/p1b.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class="flex-containerp2">
+  
+        <table class = "part-B">
+            <tr>
+                <th>Constituency</th>
+                <th>Polling Div.</th>
+                <th>Polling Stn</th>
+                <th>Candidate1</th>
+                <th>Candidate2</th>
+                <th>Rejected</th>
+                <th>Total</th>
+            </tr>    
+        
+            <?php foreach($data_list as $row):?>
+                <tr>
+                    <td><?=$row['constituency_id'];?></td>
+                    <td><?=$row['poll_division_id'];?></td>
+                    <td><?=$row['polling_station_code'];?></td>
+                    <td><?=$row['candidate1Votes'];?></td>
+                    <td><?=$row['candidate2Votes'];?></td>
+                    <td><?=$row['rejectedVotes'];?></td>
+                    <td><?=$row['totalVotes'];?></td>
+                </tr>
+        
+                <?php
+                $candid1_tot += $row['candidate1Votes'];
+                $candid2_tot += $row['candidate2Votes'];
+                $reject_total += $row['rejectedVotes'];
+                $total_total += $row['totalVotes'];
+                ?>
+        
+        
+        <?php endforeach;?>
+        <tfoot>
+            <td> <strong>Total</strong></td>
+            <td></td>
+            <td></td>
+            <td><strong><?=$candid1_tot;?></strong></td>
+            <td><strong><?=$candid2_tot;?></strong></td>
+            <td><strong><?=$reject_total;?></strong></td>
+            <td><strong><?=$total_total;?></strong></td>
+        </tfoot>
+        <?php echo "<hr />";?>
+        
+        </table>
+    </div>
+</body>
+</html>
