@@ -1,6 +1,13 @@
 <?php
     $host = 'localhost';
     $dbname = 'VoteLogDB';
-    $username = 'comp2190SA';
-    $password = '2020Sem1';
+    $username = "root";
+    $password = '';
+
+    try {
+        $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+
+    }catch (PDOException $pe) {
+        die("Could not connect to the database $dbname :" . $pe->getMessage());
+    }
 

@@ -6,7 +6,7 @@ window.addEventListener("load", (event)=> {
     let c2votes = document.querySelector(`input[name="c2votes"]`);
     let reject = document.querySelector(`input[name="reject"]`);
     let totalv = document.querySelector(`input[name="totalv"]`);
-    let submitbtn = document.querySelector("button#submitbtn");
+    let submitbtn = document.querySelector("input#submitbtn");
 
 
     console.log(inputFields);

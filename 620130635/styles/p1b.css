@@ -59,6 +59,10 @@ tr.VA{
     display:none;
 }
 
+section#status{
+    padding-bottom: 2em;
+}
+
 /*tbody tr { display: table; float: left; padding: 2em; }
 tbody td{ display: table;}
 /*tr :not(tfoot tr td){
